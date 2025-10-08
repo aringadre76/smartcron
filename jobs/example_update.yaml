@@ -1,0 +1,12 @@
+job_name: "system_update"
+command: "/usr/bin/apt-get update && /usr/bin/apt-get upgrade -y"
+preferred_time:
+  - "02:00"
+max_cpu: 70
+min_battery: 50
+min_idle_time_sec: 600
+ai_aware: true
+retry_on_fail: false
+timeout_sec: 7200
+enabled: true
+

@@ -1,0 +1,17 @@
+job_name: "daily_backup"
+command: "/usr/bin/rsync -av /home/user/documents /backup/"
+preferred_time:
+  - "01:00"
+  - "03:00"
+max_cpu: 50
+max_memory_percent: 80
+min_battery: 30
+min_disk_free_gb: 10
+ai_aware: true
+retry_on_fail: true
+max_retries: 3
+timeout_sec: 3600
+enabled: true
+schedule_window_start: "22:00"
+schedule_window_end: "06:00"
+

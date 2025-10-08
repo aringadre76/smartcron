@@ -1,0 +1,17 @@
+[Unit]
+Description=SmartCron AI-Augmented Job Scheduler
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/smartcron
+ExecStart=/usr/bin/python3 -m smartcron.core.scheduler --config-dir /etc/smartcron/jobs --model /opt/smartcron/models/model.pkl --db /var/lib/smartcron/logs.db --log-dir /var/log/smartcron --interval 60
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,5 @@
+job_name: "test_simple"
+command: "echo 'Simple test job executed at' $(date) >> /tmp/smartcron_test.log"
+ai_aware: false
+enabled: true
+

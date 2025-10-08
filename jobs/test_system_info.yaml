@@ -1,0 +1,6 @@
+job_name: "test_system_info"
+command: "echo '=== System Info ===' && uname -a && echo 'Load:' && cat /proc/loadavg && echo 'Memory:' && head -3 /proc/meminfo"
+ai_aware: false
+enabled: true
+timeout_sec: 10
+

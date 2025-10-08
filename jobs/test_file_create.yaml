@@ -1,0 +1,6 @@
+job_name: "test_file_create"
+command: "echo 'Job ran successfully' > /tmp/smartcron_job_output.txt && cat /tmp/smartcron_job_output.txt"
+ai_aware: false
+enabled: true
+max_cpu: 90
+
